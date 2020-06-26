@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Jasper</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Dark.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu-1.css">
+    <link rel="stylesheet" href="assets/css/Sidebar-Menu.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="bot-ui/css/style.css">
+
+</head>
+
+<body data-toggle="modal" data-target="#history">
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a href="#">Inquiry System</a></li>
+                <li> <a href="#">Chatbot</a></li>
+                <li> <a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand"> <a href="index.html">Inquiry System</a></li>
+                <li><img class="rounded-circle img-fluid swing animated" src="assets/img/bot.png" width="110px" height="80px" style="margin-left: 40px;height: 110px;"></li>
+                <li class="text-left" style="padding-left: 0px;color: rgb(232,230,230);font-size: 15px;"><i class="material-icons">account_circle</i><strong>&nbsp;Lise</strong></li>
+                <li> <a href="#" style="font-size: 17px;"><i class="material-icons">adb</i>&nbsp;Chatbot</a></li>
+                <li> </li>
+                <li> <a href="#" style="font-size: 17px;"><i class="material-icons">exit_to_app</i>&nbsp;Logout</a></li>
+                <li style="padding-top: 20px;color: rgb(235,234,234);">Copyright (c) 2020 Nguefack Leonel</li>
+            </ul>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="container-fluid"><a class="btn btn-link" role="button" href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></a>
+                <div class="row">
+                    <!--Chatbot interface-->
+                    <div class="chat">
+                        <div class="chat-title">
+                            <h1>Jasper</h1>
+                            <h2>i am student information chatbot</h2>
+                            <figure class="avatar">
+                                <img src="bot-ui/css/bot.png" /></figure>
+                        </div>
+                        <div class="messages">
+                            <div class="messages-content"></div>
+                            <div class="suggession">
+
+                            </div>
+                        </div>
+                        <form class="message-box" id="mymsg" method="POST">
+                            <input type="text" id="MSG" name="MSG" autocomplete="no" class="message-input" placeholder="Type message...">
+
+                            <i class="fas fa-microphone" id="start-record-btn"></i>
+                            <button type="submit" class="message-submit">Send</button>
+                        </form>
+                        <h3 class="no-browser-support" hidden>Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+                    </div>
+                    <div class="bg"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/Sidebar-Menu.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.concat.min.js'></script>
+    <script src="bot-ui/js/index.js"></script>
+</body>
+
+</html>
