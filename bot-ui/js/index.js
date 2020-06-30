@@ -21,7 +21,7 @@ recognition.onresult = (event) => {
     document.getElementById("MSG").value = speechToText;
     //console.log(speechToText)
     insertMessage();
-    serverMessage("hello");
+    //serverMessage("hello");
 }
 
 
@@ -55,7 +55,7 @@ function insertMessage() {
         return false;
     }
     $('<div class="message message-personal">' + msg + '</div>').appendTo($('.mCSB_container')).addClass('new');
-    // fetchmsg() 
+    fetchmsg();
 
     $('.message-input').val(null);
     updateScrollbar();
@@ -65,7 +65,7 @@ function insertMessage() {
 document.getElementById("mymsg").onsubmit = (e) => {
     e.preventDefault()
     insertMessage();
-    serverMessage("hello");
+    //serverMessage("hello");
     //speechSynthesis.speak(new SpeechSynthesisUtterance("hello"))
 }
 
@@ -97,7 +97,7 @@ function serverMessage(response2) {
 
 function fetchmsg() {
 
-    var url = 'http://localhost:5000/send-msg';
+    var url = 'http://localhost:8080/api/chatbot';
 
     const data = new URLSearchParams();
     for (const pair of new FormData(document.getElementById("mymsg"))) {
@@ -112,8 +112,8 @@ function fetchmsg() {
         }).then(res => res.json())
         .then(response => {
             console.log(response);
-            //  serverMessage(response.Reply);
-            speechSynthesis.speak(new SpeechSynthesisUtterance(response.Reply))
+            serverMessage(response.reply);
+            //speechSynthesis.speak(new SpeechSynthesisUtterance(response.reply))
 
 
         })
