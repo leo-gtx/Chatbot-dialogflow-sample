@@ -97,7 +97,7 @@ function serverMessage(response2) {
 
 function fetchmsg() {
 
-    var url = 'http://localhost:8080/api/chatbot';
+    var url = 'https://studentinformationchatbot.herokuapp.com/api/chatbot';
 
     const data = new URLSearchParams();
     for (const pair of new FormData(document.getElementById("mymsg"))) {
