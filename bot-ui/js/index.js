@@ -35,7 +35,7 @@ function listendom(no) {
 $(window).load(function() {
     $messages.mCustomScrollbar();
     setTimeout(function() {
-        serverMessage("hello i am Jasper, how can i help you?");
+        serverMessage("hello i'm Jasper, i'am there to help you to get information about the scholar activities in your campus. You can try to ask me something🙂");
     }, 100);
 
 });
