@@ -1,3 +1,4 @@
+const API_HOST_URL = 'https://studentinformationchatbot.herokuapp.com/api/chatbot';
 var $messages = $('.messages-content');
 var serverResponse = "wala";
 
@@ -35,7 +36,7 @@ function listendom(no) {
 $(window).load(function() {
     $messages.mCustomScrollbar();
     setTimeout(function() {
-        serverMessage("hello i'm Judith, i'm there to help you to get information about the scholar activities in your campus. You can try to ask me something");
+        serverMessage("hello i'm Judith");
     }, 100);
 
 });
@@ -97,21 +98,17 @@ function serverMessage(response2) {
 
 function fetchmsg() {
 
-    var url = 'https://studentinformationchatbot.herokuapp.com/api/chatbot';
 
     const data = new URLSearchParams();
     for (const pair of new FormData(document.getElementById("mymsg"))) {
         data.append(pair[0], pair[1]);
-        console.log(pair)
     }
 
-    console.log("abc", data)
-    fetch(url, {
+    fetch(API_HOST_URL, {
             method: 'POST',
             body: data
         }).then(res => res.json())
         .then(response => {
-            console.log(response);
             serverMessage(response.reply);
             //speechSynthesis.speak(new SpeechSynthesisUtterance(response.reply))
 
